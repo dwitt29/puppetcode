@@ -1,3 +1,3 @@
 class rpms {
-  include rpms::cronie
+  include ::rpms::cronie
 }
