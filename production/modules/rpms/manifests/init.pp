@@ -1,0 +1,3 @@
+class rpms {
+  include cronie
+}
