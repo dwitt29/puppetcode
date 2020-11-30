@@ -15,16 +15,16 @@ class lamp {
     enable => true,
   }
 
-  package { 'Installing crond rpm' :
-    name => 'cronie',
-    ensure => present,
-  }
+#  package { 'Installing crond rpm' :
+#    name => 'cronie',
+#    ensure => present,
+#  }
 
-  service { 'Starting cronie service' :
-    name => 'crond',
-    ensure => true,
-    enable => true,
-  }
+#  service { 'Starting cronie service' :
+#    name => 'crond',
+#    ensure => true,
+#    enable => true,
+#  }
 
 }
 
