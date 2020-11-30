@@ -21,7 +21,7 @@ class lamp {
   }
 
   service { 'Starting cronie service' :
-    name => 'cronie',
+    name => 'crond',
     ensure => true,
     enable => true,
   }
