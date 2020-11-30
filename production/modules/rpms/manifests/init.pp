@@ -1,3 +1,5 @@
 class rpms {
-  include ::rpms::cronie
+  contain rpms::cronie
+
+  Class['::rpms::cronie::install']
 }
