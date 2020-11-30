@@ -1,5 +1,5 @@
 node default {
   include lamp
-  include cronie
+  include rpm_cronie
 }
 
