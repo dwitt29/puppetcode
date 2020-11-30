@@ -1,4 +1,4 @@
-class cronie {
-  contain cronie::install
-  contain cronie::service
+class rpms::cronie {
+  contain rpms::cronie::install
+  contain rpms::cronie::service
 }
