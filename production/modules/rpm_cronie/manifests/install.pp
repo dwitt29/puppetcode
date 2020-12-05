@@ -9,14 +9,16 @@ class rpm_cronie::install {
 
   if $rpm_cronie::install_ensure == 'absent' {
     package { $rpm_cronie::remove_message:
-      name => $rpm_cronie::install_name,
-      ensure => $rpm_cronie::install_ensure,
+      name 	=> $rpm_cronie::install_name,
+      ensure 	=> $rpm_cronie::install_ensure,
+      provider 	=> $rpm_cronie::provider,
     }
   } 
   else {
     package { $rpm_cronie::install_message:
-      name => $rpm_cronie::install_name,
-      ensure => $rpm_cronie::install_ensure,
+      name 	=> $rpm_cronie::install_name,
+      ensure 	=> $rpm_cronie::install_ensure,
+      provider 	=> $rpm_cronie::provider,
     }
   }
 

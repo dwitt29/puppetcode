@@ -12,3 +12,5 @@ rpm_cronie::service_ensure: true
 rpm_cronie::service_enable: true
 rpm_cronie::service_start_message: 'Dave is starting service'
 rpm_cronie::service_stop_message: 'Dave is stopping service'
+
+rpm_cronie::provider: 'yum'
