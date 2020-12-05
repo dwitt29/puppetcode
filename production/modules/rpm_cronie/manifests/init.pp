@@ -14,6 +14,7 @@ class rpm_cronie (
   String $service_stop_message,
 
   String $provider,
+  String $provider_command,
 
 ) {
   contain rpm_cronie::install

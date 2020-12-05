@@ -14,3 +14,4 @@ rpm_cronie::service_start_message: 'Dave is starting service'
 rpm_cronie::service_stop_message: 'Dave is stopping service'
 
 rpm_cronie::provider: 'yum'
+rpm_cronie::provider_command: '/usr/bin/yum'

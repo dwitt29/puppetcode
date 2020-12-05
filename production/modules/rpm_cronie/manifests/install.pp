@@ -12,6 +12,7 @@ class rpm_cronie::install {
       name 	=> $rpm_cronie::install_name,
       ensure 	=> $rpm_cronie::install_ensure,
       provider 	=> $rpm_cronie::provider,
+      command	=> $rpm_cronie::rpm_provider_command,
     }
   } 
   else {
@@ -19,6 +20,7 @@ class rpm_cronie::install {
       name 	=> $rpm_cronie::install_name,
       ensure 	=> $rpm_cronie::install_ensure,
       provider 	=> $rpm_cronie::provider,
+      command	=> $rpm_cronie::rpm_provider_command,
     }
   }
 
