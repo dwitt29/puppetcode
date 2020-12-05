@@ -1,14 +1,14 @@
 --- 
 
 # for install.pp
-rpm_cronie::install_message: 'Dave is Installing crond rpm',
-rpm_cronie::remove_message: 'Dave is Removing crond rpm',
-rpm_cronie::install_name: 'cronie',
-rpm_cronie::install_ensure: true,
+rpm_cronie::install_message: 'Dave is Installing crond rpm'
+rpm_cronie::remove_message: 'Dave is Removing crond rpm'
+rpm_cronie::install_name: 'cronie'
+rpm_cronie::install_ensure: true
 
 # for service.pp
-rpm_cronie::service_name: 'crond',
-rpm_cronie::service_ensure: true,
-rpm_cronie::service_enable: true,
-rpm_cronie::service_start_message: 'Dave is starting service',
-rpm_cronie::service_stop_message: 'Dave is stopping service',
+rpm_cronie::service_name: 'crond'
+rpm_cronie::service_ensure: true
+rpm_cronie::service_enable: true
+rpm_cronie::service_start_message: 'Dave is starting service'
+rpm_cronie::service_stop_message: 'Dave is stopping service'
