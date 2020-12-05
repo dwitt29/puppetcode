@@ -4,7 +4,7 @@
 rpm_cronie::install_message: 'Dave is Installing crond rpm'
 rpm_cronie::remove_message: 'Dave is Removing crond rpm'
 rpm_cronie::install_name: 'cronie'
-rpm_cronie::install_ensure: false
+rpm_cronie::install_ensure: 'absent'
 
 # for service.pp
 rpm_cronie::service_name: 'crond'
