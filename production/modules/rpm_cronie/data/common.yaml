@@ -1,1 +1,2 @@
---- {}
+--- 
+rpm_cronie::install_message: 'Installing crond rpm' 

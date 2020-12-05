@@ -5,7 +5,7 @@
 # @example
 #   include rpm_cronie::install
 class rpm_cronie::install {
-  package { 'Installing crond rpm' :
+  package { $rpm_cronie::install_message:
     name => 'cronie',
     ensure => present,
   }
