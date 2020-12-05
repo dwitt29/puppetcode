@@ -4,12 +4,12 @@ class rpm_cronie (
   String $install_message,
   String $remove_message,
   String $install_name,
-  String $install_ensure,
+  Boolean $install_ensure,
 
   # in service.pp
   String $service_name,
-  String $service_ensure,
-  String $service_enable,
+  Boolean $service_ensure,
+  Boolean $service_enable,
   String $service_start_message,
   String $service_stop_message,
 
