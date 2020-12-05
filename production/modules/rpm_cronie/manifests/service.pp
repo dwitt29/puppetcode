@@ -7,7 +7,7 @@
 
 class rpm_cronie::service {
 
-  if $rpm_cronie::install_ensure != 'installed' {
+  if $rpm_cronie::install_ensure != 'absent' {
     service { $rpm_cronie::service_start_message :
       name => $rpm_cronie::service_name,
       ensure => $rpm_cronie::service_ensure,
