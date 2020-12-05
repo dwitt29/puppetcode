@@ -4,12 +4,13 @@
 #
 # @example
 #   include rpm_cronie::service
+
 class rpm_cronie::service {
 
-  service { 'Starting cronie service' :
-    name => 'crond',
-    ensure => true,
-    enable => true,
+  service { $rpm_cronie::service_start_message :
+    name => $rpm_cronie::service_name,
+    ensure => $rpm_cronie::service_ensure,
+    enable => $rpm_cronie::service_enable
   }
 
 }

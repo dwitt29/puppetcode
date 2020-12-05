@@ -4,9 +4,12 @@
 #
 # @example
 #   include rpm_cronie::install
+
 class rpm_cronie::install {
+
   package { $rpm_cronie::install_message:
-    name => 'cronie',
-    ensure => present,
+    name => $rpm_cronie::install_name,
+    ensure => $rpm_cronie::install_ensure,
   }
+
 }
