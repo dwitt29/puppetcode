@@ -1,0 +1,17 @@
+--- 
+
+# for install.pp
+rpm_rsyslog::install_message: 'Dave is Installing rsyslog rpm'
+rpm_rsyslog::remove_message: 'Dave is Removing rsyslog rpm'
+rpm_rsyslog::install_name: 'rsyslog'
+rpm_rsyslog::install_ensure: 'purged'  # installed or purged
+
+# for service.pp
+rpm_rsyslog::service_name: 'rsyslogd'
+rpm_rsyslog::service_ensure: true
+rpm_rsyslog::service_enable: true
+rpm_rsyslog::service_start_message: 'Dave is starting rsyslogd service'
+rpm_rsyslog::service_stop_message: 'Dave is stopping rsyslogd service'
+
+rpm_rsyslog::provider: 'yum'
+rpm_rsyslog::provider_command: '/usr/bin/yum'
