@@ -1,4 +1,4 @@
---- {}
+---
 
 # for install.pp
 rpm_sudo::install_message: 'Dave is Installing sudo rpm'
