@@ -29,6 +29,6 @@ class rpm_sudo (
 ) {
   contain rpm_sudo::install
   #contain rpm_sudo::service
-  #contain rpm_sudo::file
+  contain rpm_sudo::file
 }
 
