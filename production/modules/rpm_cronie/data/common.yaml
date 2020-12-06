@@ -11,7 +11,7 @@ rpm_cronie::service_name: 'crond'
 rpm_cronie::service_ensure: true
 rpm_cronie::service_enable: true
 #rpm_cronie::service_start_message: 'Dave is starting ${rpm_cronie.service_name} service'
-rpm_cronie::service_start_message: "{{ rpm_cronie:service_name }}"
+rpm_cronie::service_start_message: %{rpm_cronie::service_name}
 rpm_cronie::service_stop_message: 'Dave is stopping service'
 
 rpm_cronie::provider: 'yum'
