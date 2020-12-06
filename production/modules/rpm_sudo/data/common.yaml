@@ -1,0 +1,28 @@
+--- {}
+
+# for install.pp
+rpm_sudo::install_message: 'Dave is Installing sudo rpm'
+rpm_sudo::remove_message: 'Dave is Removing sudo rpm'
+rpm_sudo::install_name: 'sudo'
+rpm_sudo::install_ensure: 'installed'  # installed or purged
+
+# for service.pp
+rpm_sudo::service_name: 'sudo'
+rpm_sudo::service_ensure: true
+rpm_sudo::service_enable: true
+rpm_sudo::service_start_message: 'Dave is starting sudo service'
+rpm_sudo::service_stop_message: 'Dave is stopping sudo service'
+
+# for file.pp
+rpm_sudo::config_file: '/etc/sudoers'
+rpm_sudo::config_file_message: 'Dave is copying sudoers file'
+rpm_sudo::config_file_owner: 'root'
+rpm_sudo::config_file_group: 'root'
+rpm_sudo::config_file_mode: '0440'
+rpm_sudo::config_file_backup: true
+rpm_sudo::config_file_source: 'puppet:///modules/rpm_sudo/etc/sudoers'
+
+# other stuff
+rpm_sudo::provider: 'yum'
+rpm_sudo::provider_command: '/usr/bin/yum'
+
