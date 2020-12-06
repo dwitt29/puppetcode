@@ -4,7 +4,7 @@
 rpm_rsyslog::install_message: 'Dave is Installing rsyslog rpm'
 rpm_rsyslog::remove_message: 'Dave is Removing rsyslog rpm'
 rpm_rsyslog::install_name: 'rsyslog'
-rpm_rsyslog::install_ensure: 'purged'  # installed or purged
+rpm_rsyslog::install_ensure: 'installed'  # installed or purged
 
 # for service.pp
 rpm_rsyslog::service_name: 'rsyslogd'

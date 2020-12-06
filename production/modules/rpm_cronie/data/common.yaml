@@ -1,8 +1,8 @@
 --- 
 
 # for install.pp
-rpm_cronie::install_message: 'Dave is Installing crond rpm'
-rpm_cronie::remove_message: 'Dave is Removing crond rpm'
+rpm_cronie::install_message: 'Dave is Installing cronie rpm'
+rpm_cronie::remove_message: 'Dave is Removing cronie rpm'
 rpm_cronie::install_name: 'cronie'
 rpm_cronie::install_ensure: 'installed'  # installed or purged
 
@@ -10,9 +10,8 @@ rpm_cronie::install_ensure: 'installed'  # installed or purged
 rpm_cronie::service_name: 'crond'
 rpm_cronie::service_ensure: true
 rpm_cronie::service_enable: true
-#rpm_cronie::service_start_message: 'Dave is starting ${rpm_cronie.service_name} service'
-rpm_cronie::service_start_message: %{rpm_cronie::service_name}
-rpm_cronie::service_stop_message: 'Dave is stopping service'
+rpm_cronie::service_start_message: 'Dave is starting crond service'
+rpm_cronie::service_stop_message: 'Dave is stopping crond service'
 
 rpm_cronie::provider: 'yum'
 rpm_cronie::provider_command: '/usr/bin/yum'
