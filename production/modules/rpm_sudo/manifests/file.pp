@@ -11,7 +11,7 @@ class rpm_sudo::file {
 
   if rpm_sudo::install_ensure == 'installed' {
     file { $rpm_sudo::config_file_message:
-      name	=> rpm_sudo::config_file,
+      path	=> rpm_sudo::config_file,
       owner	=> rpm_sudo::config_file_owner,
       group	=> rpm_sudo::config_file_group,
       mode	=> rpm_sudo::config_file_mode,
