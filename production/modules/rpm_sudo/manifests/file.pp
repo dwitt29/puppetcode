@@ -7,7 +7,7 @@
 
 class rpm_sudo::file {
 
-  tag 'sudo' 
+  #tag 'sudo' 
 
   if rpm_sudo::::install_ensure == 'installed' {
     file { $rpm_sudo::config_file_message:

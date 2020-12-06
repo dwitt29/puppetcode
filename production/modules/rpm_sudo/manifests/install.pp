@@ -7,7 +7,7 @@
 
 class rpm_sudo::install {
 
-  tag 'sudo'
+  #tag 'sudo'
 
   if $rpm_sudo::install_ensure == 'purged' {
     package { $rpm_sudo::remove_message:
