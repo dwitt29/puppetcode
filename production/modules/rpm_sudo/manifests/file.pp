@@ -10,8 +10,9 @@ class rpm_sudo::file {
   #tag 'sudo' 
 
   if rpm_sudo::install_ensure == 'installed' {
-    file { $rpm_sudo::config_file_message:
-      path	=> rpm_sudo::config_file,
+    file { $rpm_sudo::config_file:
+#      path	=> rpm_sudo::config_file,
+      ensure	=> rpm_sudo::config_file_ensure,
       owner	=> rpm_sudo::config_file_owner,
       group	=> rpm_sudo::config_file_group,
       mode	=> rpm_sudo::config_file_mode,
