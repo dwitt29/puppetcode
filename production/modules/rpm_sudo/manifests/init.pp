@@ -15,6 +15,8 @@ class rpm_sudo (
 
   # in file.pp
   String $config_file,
+  String $config_file_ensure,
+  Boolean $config_file_replace,
   String $config_file_message,
   String $config_file_owner,
   String $config_file_group,
