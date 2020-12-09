@@ -26,7 +26,7 @@ class rpm_sudo (
 
   # other stuff
   String $provider,
-  String $provider_command,
+  String $rpm_provider_command,
 
 ) {
   contain rpm_sudo::install

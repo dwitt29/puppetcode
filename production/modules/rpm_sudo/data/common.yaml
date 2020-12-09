@@ -26,5 +26,5 @@ rpm_sudo::config_file_source: 'puppet:///modules/rpm_sudo/etc/sudoers'
 
 # other stuff
 rpm_sudo::provider: 'yum'
-rpm_sudo::provider_command: '/usr/bin/yum'
+rpm_sudo::rpm_provider_command: '/usr/bin/yum'
 
