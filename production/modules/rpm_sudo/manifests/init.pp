@@ -29,8 +29,8 @@ class rpm_sudo (
   String $rpm_provider_command,
 
 ) {
-  contain rpm_sudo::install
+#  contain rpm_sudo::install
   contain rpm_sudo::file
-  #contain rpm_sudo::service
+#  contain rpm_sudo::service
 }
 
