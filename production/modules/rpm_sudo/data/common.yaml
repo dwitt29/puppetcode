@@ -15,7 +15,7 @@ rpm_sudo::service_stop_message: 'Dave is stopping sudo service'
 
 # for file.pp
 rpm_sudo::config_file: '/etc/sudoers'
-rpm_sudo::config_file_ensure: 'file'
+rpm_sudo::config_file_ensure: 'present'
 rpm_sudo::config_file_replace: true
 rpm_sudo::config_file_message: 'Dave is copying sudoers file'
 rpm_sudo::config_file_owner: 'root'
