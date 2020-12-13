@@ -8,7 +8,7 @@
 class rpm_sudo::copyfile {
 
   #tag 'sudo' 
-  notify { "rpm installed? $rpm_sudo::install_ensure": }
+  notify { "\$rpm_sudo::install_ensure = $rpm_sudo::install_ensure": }
   if $rpm_sudo::install_ensure == 'installed' {
     file { $rpm_sudo::config_file:
       ensure	=> $rpm_sudo::config_file_ensure,
