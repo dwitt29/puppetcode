@@ -8,7 +8,7 @@
 class rpm_sudo::copyfile {
 
   #tag 'sudo' 
-  notice( "rpm installed? ${::install_ensure}"
+  notice( "rpm installed? ${::install_ensure}" )
   if rpm_sudo::install_ensure == 'installed' {
     notice("Copying suders")
     file { $rpm_sudo::config_file:
