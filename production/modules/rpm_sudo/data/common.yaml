@@ -20,7 +20,7 @@ rpm_sudo::config_file_replace: true
 rpm_sudo::config_file_message: 'Dave is copying sudoers file'
 rpm_sudo::config_file_owner: 'root'
 rpm_sudo::config_file_group: 'root'
-rpm_sudo::config_file_mode: 'o=rw,ug=r,o=r'
+rpm_sudo::config_file_mode: 'o=rw, og=r'
 rpm_sudo::config_file_backup: true
 rpm_sudo::config_file_source: 'puppet:///modules/rpm_sudo/etc/sudoers'
 
