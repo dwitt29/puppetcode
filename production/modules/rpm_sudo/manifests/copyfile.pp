@@ -3,9 +3,9 @@
 # A description of what this class does
 #
 # @example
-#   include rpm_sudo::file
+#   include rpm_sudo::copyfile
 
-class rpm_sudo::file {
+class rpm_sudo::copyfile {
 
   #tag 'sudo' 
 
