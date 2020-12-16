@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe 'etc_passwd::fids' do
+describe 'etc::fids' do
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
       let(:facts) { os_facts }
