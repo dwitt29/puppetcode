@@ -5,4 +5,17 @@
 # @example
 #   include etc::securefiles
 class etc::securefiles {
+    
+    file { $etc::etc_passwd_path,
+      owner     => $etc::etc_passwd_owner,
+      group     => $etc::etc_passwd_group,
+      mode      => $etc::etc_passwd_mode,
+    }
+
+    file { $etc::etc_shadow_path,
+      owner     => $etc::etc_shadow_owner,
+      group     => $etc::etc_shadow_group,
+      mode      => $etc::etc_shadow_mode,
+    }
+
 }

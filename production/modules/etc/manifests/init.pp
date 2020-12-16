@@ -12,6 +12,7 @@ class etc (
   String 	$etc_passwd_group,
 )
 {
-  contain etc_passwd::users
-  contain etc_passwd::fids
+  #contain etc::users
+  #contain etc::fids
+  contain etc::securefiles
 }
