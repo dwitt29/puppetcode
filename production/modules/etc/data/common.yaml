@@ -1,11 +1,11 @@
 --- 
 
-etc_passwd::etc_passwd_path: '/etc/passwd'
-etc_passwd::etc_passwd_mode: '0644'
-etc_passwd::etc_passwd_owner: 'root'
-etc_passwd::etc_passwd_group: 'root'
+etc::etc_passwd_path: '/etc/passwd'
+etc::etc_passwd_mode: '0644'
+etc::etc_passwd_owner: 'root'
+etc::etc_passwd_group: 'root'
 
-etc_passwd::etc_shadow_path: '/etc/shadow'
-etc_passwd::etc_shadow_mode: '0000'
-etc_passwd::etc_shadow_owner: 'root'
-etc_passwd::etc_shadow_group: 'root'
+etc::etc_shadow_path: '/etc/shadow'
+etc::etc_shadow_mode: '0000'
+etc::etc_shadow_owner: 'root'
+etc::etc_shadow_group: 'root'

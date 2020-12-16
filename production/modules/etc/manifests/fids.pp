@@ -3,6 +3,6 @@
 # A description of what this class does
 #
 # @example
-#   include etc_passwd::fids
-class etc_passwd::fids {
+#   include etc::fids
+class etc::fids {
 }

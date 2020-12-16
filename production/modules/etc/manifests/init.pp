@@ -1,4 +1,4 @@
-class etc_passwd (
+class etc (
 
   String 	$etc_passwd_path,
   String 	$etc_passwd_mode,

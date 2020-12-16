@@ -3,6 +3,6 @@
 # A description of what this class does
 #
 # @example
-#   include etc_passwd::users
-class etc_passwd::users {
+#   include etc::users
+class etc::users {
 }
