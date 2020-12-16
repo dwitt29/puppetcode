@@ -20,4 +20,10 @@ class etc::securefiles {
       mode      => $etc::etc_shadow_mode,
     }
 
+    notify { "Checking $etc::etc_group_path ": }
+    file { $etc::etc_group_path:
+      owner     => $etc::etc_group_owner,
+      group     => $etc::etc_group_group,
+      mode      => $etc::etc_group_mode,
+    }
 }
