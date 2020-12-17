@@ -21,7 +21,7 @@ class etc (
   String  $rates_user_comment,
   String  $rates_user_home,
   String  $rates_user_shell,
-  String  $rates_user_groups,
+  Array[String]  $rates_user_groups,
   String  $rates_user_install,
   String  $rates_user_uninstall,
 )
