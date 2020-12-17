@@ -12,5 +12,5 @@ class etc::fids {
     notify { "Checking \$scruffy3 = $hi": }
     if ${facts['scruffy']} {
         notify { "Scruffy is True": }
-    if 
+    } 
 }
