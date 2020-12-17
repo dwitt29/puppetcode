@@ -5,7 +5,9 @@
 # @example
 #   include etc::fids
 class etc::fids {
+    $hi = facts.get('scruffy', 'no scruffy')
     notify { "Checking \$os->\$family = ${facts['os']['family']}": }
     notify { "Checking \$scruffy1 = ${facts['scruffy']}": }
     notify { "Checking \$scruffy2 = ${scruffy}": }
+    notify { "Checking \$scruffy3 = $hi": }
 }
