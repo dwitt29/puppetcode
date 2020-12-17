@@ -14,6 +14,16 @@ class etc (
   String 	$etc_group_mode,
   String 	$etc_group_owner,
   String 	$etc_group_group,
+
+  String  $rates_user_name,
+  String  $rates_user_uid,
+  String  $rates_user_gid,
+  String  $rates_user_comment,
+  String  $rates_user_home,
+  String  $rates_user_shell,
+  String  $rates_user_groups,
+  Boolean $rates_user_install,
+  Boolean $rates_user_uninstall,
 )
 {
   #contain etc::users
