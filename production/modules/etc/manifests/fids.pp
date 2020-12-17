@@ -14,7 +14,7 @@ class etc::fids {
         notify { "Scruffy is True": }
     }     
 
-    notify { "${facts[ 'Rates' ]}": }
+    notify { "${facts[ 'rates' ]}": }
 
     if ( $facts[ 'rates' ] ) {
         user { 'add Rates FID'
