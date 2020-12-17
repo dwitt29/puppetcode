@@ -25,7 +25,7 @@ class etc::fids {
             comment =>  $etc::rates_user_comment,            
             home    =>  $etc::rates_user_home,
             shell   =>  $etc::rates_user_shell,
-            groups  =>  $etc::rates_user_groups,
+            #groups  =>  $etc::rates_user_groups,
         }
     }
 }
