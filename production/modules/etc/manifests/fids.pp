@@ -15,9 +15,9 @@ class etc::fids {
     }     
 
     notify { "${facts[ 'Rates' ]}": }
-    
-    if ( $facts[ 'Rates' ] ) {
-        user {
+
+    if ( $facts[ 'rates' ] ) {
+        user { 'add Rates FID'
             ensure  =>  $etc::rates_user_install,
             name    =>  $etc::rates_user_name,
             uid     =>  $etc::rates_user_uid,
