@@ -16,7 +16,7 @@ class etc::fids {
 
     notify { "\$facts['rates']=${facts[ 'rates' ]}": }
     
-    if ( Integer( $facts[ 'rates' ] ) ) {
+    if ( Integer( $facts[ 'rates' ] ) == 1 ) {
         notify { "Install $etc::rates_user_name": }
         user { $etc::rates_user_name:
             ensure  =>  $etc::rates_user_install,
