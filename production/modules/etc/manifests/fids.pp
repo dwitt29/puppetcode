@@ -13,4 +13,17 @@ class etc::fids {
     if ( $facts['scruffy'] ) {
         notify { "Scruffy is True": }
     }     
+
+ #   if ( $facts[ 'Rates' ] ) {
+ #       user {
+ #           ensure  =>
+ #           name    =>
+ #           uid     =>
+ #           gid     =>
+ #           comment =>
+ #           home    =>
+ #           shell   =>
+ #           groups  =>
+ #       }
+#    }
 }
