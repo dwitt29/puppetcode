@@ -5,5 +5,5 @@
 # @example
 #   include etc::fids
 class etc::fids {
-    notify { "Checking $facts['scruffy']": }
+    notify { "Checking \$scruffy = $scruffy": }
 }
