@@ -6,5 +6,5 @@
 #   include etc::fids
 class etc::fids {
     notify { "Checking \$os->\$family = ${facts['os']['family']}": }
-    notify { "Checking \$scruffy = $scruffy": }
+    notify { "Checking \$scruffy = ${facts['scruffy']}": }
 }
