@@ -14,9 +14,10 @@ class etc::fids {
     #    notify { "Scruffy is True": }
     #}     
 
-    notify { "${facts[ 'rates' ]}": }
-
+    notify { "\$facts[ 'rates' ]=${facts[ 'rates' ]}": }
+    
     if ( $facts[ 'rates' ] ) {
+        notify { "Install $etc::rates_user_name": }
         user { $etc::rates_user_name:
             ensure  =>  $etc::rates_user_install,
             uid     =>  $etc::rates_user_uid,
@@ -27,6 +28,7 @@ class etc::fids {
             #groups  =>  $etc::rates_user_groups,
         }
     } else {
+        notify { "Remove $etc::rates_user_name": }
         user { $etc::rates_user_name:
             ensure  =>  $etc::rates_user_uninstall,
         }
