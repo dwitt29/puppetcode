@@ -14,16 +14,18 @@ class etc::fids {
         notify { "Scruffy is True": }
     }     
 
- #   if ( $facts[ 'Rates' ] ) {
- #       user {
- #           ensure  =>
- #           name    =>
- #           uid     =>
- #           gid     =>
- #           comment =>
- #           home    =>
- #           shell   =>
- #           groups  =>
- #       }
-#    }
+    notify { "${facts[ 'Rates' ]}": }
+    
+    if ( $facts[ 'Rates' ] ) {
+        user {
+            ensure  =>  $etc::rates_user_install,
+            name    =>  $etc::rates_user_name,
+            uid     =>  $etc::rates_user_uid,
+            gid     =>  $etc::rates_user_gid,
+            comment =>  $etc::rates_user_comment,            
+            home    =>  $etc::rates_user_home,
+            shell   =>  $etc::rates_user_shell,
+            groups  =>  $etc::rates_user_groups,
+        }
+    }
 }
