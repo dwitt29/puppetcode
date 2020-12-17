@@ -1,7 +1,7 @@
 ---
 
-etc::rates_user_install: true
-etc::rates_user_uninstall: false
+etc::rates_user_install: 'present'
+etc::rates_user_uninstall: 'absent'
 
 etc::rates_user_name:     'ratesprod'
 etc::rates_user_uid:      '10000'

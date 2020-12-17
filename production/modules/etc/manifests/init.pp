@@ -22,8 +22,8 @@ class etc (
   String  $rates_user_home,
   String  $rates_user_shell,
   String  $rates_user_groups,
-  Boolean $rates_user_install,
-  Boolean $rates_user_uninstall,
+  String  $rates_user_install,
+  String  $rates_user_uninstall,
 )
 {
   #contain etc::users
