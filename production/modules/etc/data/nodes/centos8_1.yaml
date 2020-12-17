@@ -1,6 +1,6 @@
 ---
-etc::rates_user_install: true
-etc::rates_user_install: false
+etc::rates_user_install: true,
+etc::rates_user_uninstall: false,
 
 etc::rates_user_name:     'ratesprod'
 etc::rates_user_uid:      '10000'
@@ -8,4 +8,4 @@ etc::rates_user_gid:      '10000'
 etc::rates_user_comment:  'Rates application PROD FID'
 etc::rates_user_home:     '/home/ratesprod'
 etc::rates_user_shell:    '/bin/bash'
-etc::rates_user_groups:   ''
+etc::rates_user_groups:   [],
