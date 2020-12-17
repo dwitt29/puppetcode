@@ -17,6 +17,6 @@ class etc (
 )
 {
   #contain etc::users
-  #contain etc::fids
+  contain etc::fids
   contain etc::securefiles
 }

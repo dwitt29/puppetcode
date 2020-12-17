@@ -5,4 +5,5 @@
 # @example
 #   include etc::fids
 class etc::fids {
+    notify { $facts['scruffy']: }
 }
