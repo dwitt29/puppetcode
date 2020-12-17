@@ -10,4 +10,7 @@ class etc::fids {
     notify { "Checking \$scruffy1 = ${facts['scruffy']}": }
     notify { "Checking \$scruffy2 = $scruffy": }
     notify { "Checking \$scruffy3 = $hi": }
+    if ${facts['scruffy']} {
+        notify { "Scruffy is True": }
+    if 
 }
