@@ -8,6 +8,16 @@ class rpm_python::install {
 
   if $rpm_python::install_python_ensure == 'purged' {  # Removal
 
+    $rpm_python::install_pip_packages.each | String $pip_package | {
+      notify { "$rpm_python::uninstall_pip_package_message $pip_package": }
+      package { "$rpm_python::uninstall_pip_package_message $pip_package":
+        name        =>  $pip_package,
+        provider    =>  'pip3',
+        command     =>  $rpm_python::install_pip_linkdst,
+        ensure      =>  $rpm_python::install_python_ensure,
+      }
+    } 
+    
     notify { $rpm_python::uninstall_python_message: }
     package { $rpm_python::uninstall_python_message:
       name    =>  $rpm_python::install_python_name,
