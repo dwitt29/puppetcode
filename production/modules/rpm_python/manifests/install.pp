@@ -54,8 +54,8 @@ class rpm_python::install {
     }
 
     notify { $rpm_python::install_pip_link_message: }
-    file { $rpm_python::install_python_link_message:
-      path      => $rpm_python::install_python_linkdst,
+    file { $rpm_python::install_pip_link_message:
+      path      => $rpm_python::install_pip_linkdst,
       ensure    => $rpm_python::install_pip_link_ensure,
       target    => $rpm_python::install_pip_linksrc,
     }
