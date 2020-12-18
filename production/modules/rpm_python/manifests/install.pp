@@ -61,7 +61,13 @@ class rpm_python::install {
     }
 
     $rpm_python::install_pip_packages.each | String $pip_package | {
-      notify { "hello $pip_package": }
+      notify { "$rpm_python::install_pip_package_message $pip_package": }
+      package { "$rpm_python::install_pip_package_message $pip_package":
+        name        =>  $pip_package,
+        provider    =>  'pip3',
+        command     =>  $rpm_python::install_pip_linkdst,
+        ensure      =>  $rpm_python::install_python_ensure,
+      }
     }
   
   }

@@ -24,4 +24,9 @@ rpm_python::install_pip_linkdst: '/usr/bin/pip'
 rpm_python::install_pip_link_ensure: 'link'
 rpm_python::uninstall_pip_link_ensure: 'absent'
 
+# packages/modules to install via Pip
+rpm_python::install_pip_package_message: 'Install Pip package'
+rpm_python::uninstall_pip_package_message: 'Uninstall Pip package'
+rpm_python::install_pip_package_cmd: 'install',
+rpm_python::uninstall_pip_package_cmd: 'uninstall',
 rpm_python::install_pip_packages: [ 'pyyaml', 'requests' ]
