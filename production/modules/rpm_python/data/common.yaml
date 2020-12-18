@@ -1,11 +1,21 @@
 --- 
 
+# python rpm config
 rpm_python::install_python_message: 'Install Python RPM'
 rpm_python::uninstall_python_message: 'Uninstall Python RPM'
 rpm_python::install_python_name: 'python38'
 rpm_python::install_python_ensure: 'installed'  # 'installed' or 'purged'
+rpm_python::install_python_linksrc: '/usr/bin/python3.8'
+rpm_python::install_python_linkdst: '/usr/bin/python'
+rpm_python::install_python_link_ensure: 'link'
+rpm_python::uninstall_python_link_ensure: 'absent'
 
+# Pip rpm config
 rpm_python::install_pip_message: 'Install Pip RPM'
 rpm_python::uninstall_pip_message: 'Uninstall Pip RPM'
 rpm_python::install_pip_name: 'python38-pip'
 rpm_python::install_pip_ensure: 'installed'  # 'installed' or 'purged'
+rpm_python::install_pip_linksrc: '/usr/bin/pip3.8'
+rpm_python::install_pip_linkdst: '/usr/bin/pip'
+rpm_python::install_pip_link_ensure: 'link'
+rpm_python::uninstall_pip_link_ensure: 'absent'
