@@ -30,12 +30,7 @@ class rpm_python::install {
     file { $rpm_python::uninstall_pip_link_message:
       path      => $rpm_python::install_pip_linkdst,
       ensure    => $rpm_python::uninstall_pip_link_ensure,
-    }
-
-    $rpm_python::install_pip_packages.each | String $pip_package | {
-      notify { "hello $pip_package": }
-    }
-    
+    } 
 
    } else {    # Install
 
@@ -64,6 +59,11 @@ class rpm_python::install {
       ensure    => $rpm_python::install_pip_link_ensure,
       target    => $rpm_python::install_pip_linksrc,
     }
+
+    $rpm_python::install_pip_packages.each | String $pip_package | {
+      notify { "hello $pip_package": }
+    }
+  
   }
 
 }
