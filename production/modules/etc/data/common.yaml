@@ -9,3 +9,8 @@ etc::etc_shadow_path: '/etc/shadow'
 etc::etc_shadow_mode: '0000'
 etc::etc_shadow_owner: 'root'
 etc::etc_shadow_group: 'root'
+
+etc::etc_group_path: '/etc/group'
+etc::etc_group_mode: '0644'
+etc::etc_group_owner: 'root'
+etc::etc_group_group: 'root'

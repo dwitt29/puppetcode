@@ -12,7 +12,7 @@ class rpm_rsyslog::install {
       name 	=> $rpm_rsyslog::install_name,
       ensure 	=> $rpm_rsyslog::install_ensure,
       provider 	=> $rpm_rsyslog::provider,
-      command	=> $rpm_rsyslog::rpm_provider_command,
+      command	=> $rpm_rsyslog::provider_command,
     }
   } 
   else {
@@ -20,7 +20,7 @@ class rpm_rsyslog::install {
       name 	=> $rpm_rsyslog::install_name,
       ensure 	=> $rpm_rsyslog::install_ensure,
       provider 	=> $rpm_rsyslog::provider,
-      command	=> $rpm_rsyslog::rpm_provider_command,
+      command	=> $rpm_rsyslog::provider_command,
     }
   }
 
