@@ -9,6 +9,8 @@ class rpm_python (
   String  $install_python_linkdst,
   String  $install_python_link_ensure,
   String  $uninstall_python_link_ensure,
+  String  $install_python_link_message,
+  String  $uninstall_python_link_message,
 
   String  $install_pip_message,
   String  $uninstall_pip_message,
@@ -18,6 +20,8 @@ class rpm_python (
   String  $install_pip_linkdst,
   String  $install_pip_link_ensure,
   String  $uninstall_pip_link_ensure,
+  String  $install_pip_link_message,
+  String  $uninstall_pip_link_message,
   
   )
 {
