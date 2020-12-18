@@ -10,3 +10,8 @@ etc::rates_user_comment:  'Rates application PROD FID'
 etc::rates_user_home:     '/home/ratesprod'
 etc::rates_user_shell:    '/bin/bash'
 etc::rates_user_groups:   []
+
+etc::rates_group_install:     'present'
+etc::rates_group_uninstall:   'absent'
+etc::rates_group_name:        'ratesprod'
+etc::rates_group_gid:         '10000'

@@ -24,6 +24,11 @@ class etc (
   Array[String]  $rates_user_groups,
   String  $rates_user_install,
   String  $rates_user_uninstall,
+
+  String  $rates_group_install,
+  String  $rates_group_uninstall,
+  String  $rates_group_name,
+  String  $rates_group_gid,
 )
 {
   #contain etc::users
