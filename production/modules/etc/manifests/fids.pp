@@ -17,7 +17,7 @@ class etc::fids {
     notify { "\$facts['rates']=${facts[ 'rates' ]}": }
     
     if ( Integer( $facts[ 'rates' ] ) == 1 ) {
-        notify { "Install $etc::rates_user_name": }
+        notify { "Install user $etc::rates_user_name": }
         user { $etc::rates_user_name:
             ensure  =>  $etc::rates_user_install,
             uid     =>  $etc::rates_user_uid,
@@ -27,8 +27,8 @@ class etc::fids {
             shell   =>  $etc::rates_user_shell,
             #groups  =>  $etc::rates_user_groups,
         }
-        
-        notify { "Install $etc::rates_group_name": }
+
+        notify { "Install group $etc::rates_group_name": }
         group { $etc::rates_group_name: 
             ensure      => $etc::rates_group_install,
             gid         => $etc::rates_group_gid,
