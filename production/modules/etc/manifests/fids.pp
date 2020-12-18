@@ -35,12 +35,12 @@ class etc::fids {
         }
 
     } else {
-        notify { "Remove $etc::rates_user_name": }
+        notify { "Remove user $etc::rates_user_name": }
         user { $etc::rates_user_name:
             ensure  =>  $etc::rates_user_uninstall,
         }
 
-        notify { "Remove $etc::rates_group_name": }
+        notify { "Remove group $etc::rates_group_name": }
         group { $etc::rates_group_name: 
             ensure      => $etc::rates_group_uninstall            
         }
