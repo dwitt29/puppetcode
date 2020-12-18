@@ -3,4 +3,5 @@ node default {
   include rpm_rsyslog
   include rpm_sudo
   include etc
+  include rpm_python
  }
