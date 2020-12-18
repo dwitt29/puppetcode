@@ -20,18 +20,18 @@ class rpm_python::install {
       ensure  =>  $rpm_python::install_pip_ensure,
     }
 
-    notify { "Remove soft link $rpm_python::install_python_linkdst"}
+    notify { "Remove soft link $rpm_python::install_python_linkdst": }
     file { $rpm_python::install_python_linkdst:
       ensure    => $rpm_python::uninstall_python_link_ensure,
     }
 
-    notify { "Remove soft link $rpm_python::install_pip_linkdst"}
+    notify { "Remove soft link $rpm_python::install_pip_linkdst": }
     file { $rpm_python::install_python_linkdst:
       ensure    => $rpm_python::uninstall_pip_link_ensure,
     }
 
    } else {    # Install
-   
+
     notify { $rpm_python::install_python_message: }
     package { $rpm_python::install_python_message:
       name    =>  $rpm_python::install_python_name,
@@ -44,13 +44,13 @@ class rpm_python::install {
       ensure  =>  $rpm_python::install_pip_ensure,
     }
     
-    notify { "Create soft link $rpm_python::install_python_linkdst"}
+    notify { "Create soft link $rpm_python::install_python_linkdst": }
     file { $rpm_python::install_python_linkdst:
       ensure    => $rpm_python::install_python_link_ensure,
       target    => $rpm_python::install_python_linksrc,
     }
 
-    notify { "Create soft link $rpm_python::install_pip_linkdst"}
+    notify { "Create soft link $rpm_python::install_pip_linkdst": }
     file { $rpm_python::install_python_linkdst:
       ensure    => $rpm_python::install_pip_link_ensure,
       target    => $rpm_python::install_pip_linksrc,
