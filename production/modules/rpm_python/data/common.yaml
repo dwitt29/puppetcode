@@ -23,3 +23,5 @@ rpm_python::install_pip_linksrc: '/usr/bin/pip3.8'
 rpm_python::install_pip_linkdst: '/usr/bin/pip'
 rpm_python::install_pip_link_ensure: 'link'
 rpm_python::uninstall_pip_link_ensure: 'absent'
+
+rpm_python::install_pip_packages: [ 'pyyaml', 'requests' ]

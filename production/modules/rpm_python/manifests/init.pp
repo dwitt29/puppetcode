@@ -22,6 +22,8 @@ class rpm_python (
   String  $uninstall_pip_link_ensure,
   String  $install_pip_link_message,
   String  $uninstall_pip_link_message,
+
+  Array[String] $install_pip_packages,
   
   )
 {
