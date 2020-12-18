@@ -6,7 +6,7 @@
 #   include rpm_python::install
 class rpm_python::install {
 
-  if $rpm_python::install_ensure == 'purged' {
+  if $rpm_python::install_python_ensure == 'purged' {
 
     package { $rpm_python::uninstall_python_message:
       name    =>  $rpm_python::install_python_name,
