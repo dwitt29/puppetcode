@@ -80,6 +80,7 @@ class rpm_python::install {
         provider    =>  $rpm_python::pip_provider,
         command     =>  $rpm_python::install_pip_linkdst,
         ensure      =>  $rpm_python::install_python_ensure,
+        uninstall_options   => [ '-y' ],
       }
     }
   }  
@@ -91,7 +92,7 @@ class rpm_python::install {
         name        =>  $pip_package,
         provider    =>  $rpm_python::pip_provider,
         command     =>  $rpm_python::install_pip_linkdst,
-        ensure      =>  $rpm_python::install_pip_package_ensure,
+        ensure      =>  $rpm_python::install_pip_package_ensure,        
       }
     }
   }  
