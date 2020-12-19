@@ -27,8 +27,8 @@ class rpm_python (
   # packages/modules to install via Pip
   String  $install_pip_package_message,
   String  $uninstall_pip_package_message,
-  String  $install_pip_package_cmd,
-  String  $uninstall_pip_package_cmd,
+  #String  $install_pip_package_cmd,
+  #String  $uninstall_pip_package_cmd,
   Array[String] $install_pip_packages,
   
   )
