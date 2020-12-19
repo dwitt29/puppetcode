@@ -4,7 +4,7 @@
 rpm_python::install_python_message: 'Install Python RPM'
 rpm_python::uninstall_python_message: 'Uninstall Python RPM'
 rpm_python::install_python_name: 'python38'
-rpm_python::install_python_ensure: 'purged'  # 'installed' or 'purged'
+rpm_python::install_python_ensure: 'installed'  # 'installed' or 'purged'
 rpm_python::install_python_link_message: 'Install Python soft link'
 rpm_python::uninstall_python_link_message: 'Remove Python soft link'
 rpm_python::install_python_linksrc: '/usr/bin/python3.8'
