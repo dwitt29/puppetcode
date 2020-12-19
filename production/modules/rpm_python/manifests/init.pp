@@ -28,6 +28,8 @@ class rpm_python (
   String  $install_pip_package_message,
   String  $uninstall_pip_package_message,
   Array[String] $install_pip_packages,
+  String  $install_pip_package_ensure,
+  String  $pip_provider,
   
   )
 {
