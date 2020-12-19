@@ -15,7 +15,7 @@ class rpm_python::install {
         provider    =>  'pip3',
         command     =>  $rpm_python::install_pip_linkdst,
         #ensure      =>  $rpm_python::install_python_ensure,
-        ensure      => 'uninstall'
+        ensure      => 'absent'
       }
     } 
 
