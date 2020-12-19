@@ -5,6 +5,8 @@ rpm_python::install_python_message: 'Install Python RPM'
 rpm_python::uninstall_python_message: 'Uninstall Python RPM'
 rpm_python::install_python_name: 'python38'
 rpm_python::install_python_ensure: 'installed'  # 'installed' or 'purged'
+
+# python soft link config
 rpm_python::install_python_link_message: 'Install Python soft link'
 rpm_python::uninstall_python_link_message: 'Remove Python soft link'
 rpm_python::install_python_linksrc: '/usr/bin/python3.8'
@@ -17,6 +19,8 @@ rpm_python::install_pip_message: 'Install Pip RPM'
 rpm_python::uninstall_pip_message: 'Uninstall Pip RPM'
 rpm_python::install_pip_name: 'python38-pip'
 rpm_python::install_pip_ensure: 'installed'  # 'installed' or 'purged'
+
+# pip soft link config
 rpm_python::install_pip_link_message: 'Install Pip soft link'
 rpm_python::uninstall_pip_link_message: 'Remove Pip soft link'
 rpm_python::install_pip_linksrc: '/usr/bin/pip3.8'
@@ -27,6 +31,6 @@ rpm_python::uninstall_pip_link_ensure: 'absent'
 # packages/modules to install via Pip
 rpm_python::install_pip_package_message: 'Install Pip package'
 rpm_python::uninstall_pip_package_message: 'Uninstall Pip package'
-rpm_python::install_pip_package_cmd: 'install'
-rpm_python::uninstall_pip_package_cmd: 'uninstall'
+rpm_python::install_pip_package_ensure: 'install'   # 'install' or 'absent'
+rpm_python::pip_provider: 'pip3'
 rpm_python::install_pip_packages: [ 'pyyaml', 'requests' ]
