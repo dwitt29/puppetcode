@@ -29,8 +29,8 @@ rpm_python::install_pip_link_ensure: 'link'
 rpm_python::uninstall_pip_link_ensure: 'absent'
 
 # packages/modules to install via Pip
-rpm_python::install_pip_package_message: 'Install Pip package'
-rpm_python::uninstall_pip_package_message: 'Uninstall Pip package'
+rpm_python::install_pip_package_message: 'Install Pip module = '
+rpm_python::uninstall_pip_package_message: 'Uninstall Pip module ='
 rpm_python::install_pip_package_ensure: 'absent'   # 'install' or 'absent'
 rpm_python::pip_provider: 'pip3'
 rpm_python::install_pip_packages: [ 'pyyaml', 'requests' ]

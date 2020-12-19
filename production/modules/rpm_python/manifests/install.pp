@@ -98,8 +98,8 @@ class rpm_python::install {
 
    if $rpm_python::install_pip_package_ensure == 'absent' {
    $rpm_python::install_pip_packages.each | String $pip_package | {
-     notify { "$rpm_python::install_pip_package_message $pip_package": }
-     package { "$rpm_python::install_pip_package_message $pip_package": 
+     notify { "$rpm_python::uninstall_pip_package_message $pip_package": }
+     package { "$rpm_python::uninstall_pip_package_message $pip_package": 
        name        =>  $pip_package,
        provider    =>  $rpm_python::pip_provider,
        command     =>  $rpm_python::install_pip_linkdst,
