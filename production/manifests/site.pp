@@ -5,3 +5,7 @@ node default {
   include etc
   include rpm_python
  }
+
+ node centos8_jenkins {
+   include jenkins
+ }
