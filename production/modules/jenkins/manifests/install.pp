@@ -6,7 +6,7 @@
 #   include jenkins::install
 class jenkins::install {
 
-  notify { "In jenkins install.pp" }
+  notify { "In jenkins install.pp": }
   file { "/root/jenkins_install.bash":
         mode => "0744",
         owner => 'root',
