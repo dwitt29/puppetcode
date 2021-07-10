@@ -1,6 +1,6 @@
 class jenkins (
 
-  notify { "In Jenkins init.pp"}
+  notify { "In Jenkins init.pp" },
 )
 {
   #contain etc::users
