@@ -45,4 +45,20 @@ class etc::fids {
             ensure      => $etc::rates_group_uninstall            
         }
     }
+
+    notify { "Install user $etc::jenkins_user_name": }
+    user { etc::jenkins_user_name:
+        ensure  => etc::jenkins_user_install,
+        uid     => etc::jenkins_user_uid,
+        gid     => etc::jenkins_user_gid,
+        comment => etc::jenkins_user_comment,
+        home    => etc::jenkins_user_home,
+        shell   => etc::jenkins_user_shell,
+    }
+
+    notify { "Install group $etc::jenkins_group_name": }
+    group { $etc::jenkins_group_name: 
+           ensure      => $etc::jenkins_group_install,
+           gid         => $etc::jenkins_group_gid,
+       }
 }

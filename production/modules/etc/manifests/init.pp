@@ -29,7 +29,22 @@ class etc (
   String  $rates_group_uninstall,
   String  $rates_group_name,
   String  $rates_group_gid,
-)
+
+  String  $jenkins_user_install,
+  String  $jenkins_user_uninstall,
+
+  String  $jenkins_user_name,
+  String  $jenkins_user_uid,
+  String  $jenkins_user_gid,
+  String  $jenkins_user_comment,
+  String  $jenkins_user_home,
+  String  $jenkins_user_shell,
+  String  $jenkins_user_groups,
+
+  String  $jenkins_group_install,
+  String  $jenkins_group_uninstall,
+  String  $jenkins_group_name,
+  String  $jenkins_group_gid,)
 {
   #contain etc::users
   contain etc::fids
