@@ -6,6 +6,6 @@ node default {
   include rpm_python
  }
 
- node 'centos8_jenkins' {
+ node /centos8_jenkins/ {
    include jenkins
  }
