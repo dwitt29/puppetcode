@@ -13,7 +13,6 @@ class jenkins::install {
         group => 'root',
         source => 'puppet:///modules/jenkins/jenkins_install.bash',
     }
-}
 
   #exec { "Running Jenkins install script":
   #  command => '/bin/bash /root/jenkins_install.bash',
